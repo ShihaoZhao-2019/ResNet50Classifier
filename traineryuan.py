@@ -106,9 +106,9 @@ class NetworkManager(object):
         best_train_acc = 0
         best_test_acc = 0
         self.net.train(True)
-        for epoch in range(1, 8000000000000000000):
+        for epoch in range(1, 80):
             self.train_loader = torch.utils.data.DataLoader(self.train_data, batch_size=self.options['batch_size'], shuffle=True,
-                                                            num_workers=2, pin_memory=True)
+                                                            num_workers=16, pin_memory=True)
             avg_train_loss_epoch, train_acc_epoch, test_acc_epoch, model_xun = NetworkManager.doTrain(self, self.train_loader)
             testaccData.append([epoch, test_acc_epoch])
             if train_acc_epoch > best_train_acc:
