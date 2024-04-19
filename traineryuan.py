@@ -9,7 +9,6 @@ from cub import CUB
 import codecs
 import csv
 import os
-torch.backends.cudnn.enabled = False
 
 def data_write_csv(outputDirName,epoch,datas):  # file_name为写入CSV文件的路径，datas为要写入数据列表
     root = './output'
