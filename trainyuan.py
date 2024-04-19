@@ -3,8 +3,6 @@ import argparse
 import torch
 from traineryuan import NetworkManager
 import os
-# os.environ["CUDA_VISIBLE_DEVICES"] = "12,14,15,16,17"
-os.environ["CUDA_VISIBLE_DEVICES"] = "16,17,18,19"
 
 def main():
     parser = argparse.ArgumentParser(
